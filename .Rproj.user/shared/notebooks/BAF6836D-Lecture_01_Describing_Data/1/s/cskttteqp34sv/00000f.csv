@@ -1,0 +1,7 @@
+"0","ggplot(handedness_data, aes(x = hand)) + "
+"0","  geom_bar(fill = 'white', color = 'black') + # These two lines are important"
+"0","  stat_count(geom = ""text"", size = 5,"
+"0","             aes(label = scales::percent(..count../nrow(handedness_data)), "
+"0","                 y = ..count.. + 1300)) +"
+"0","  ggpubr::theme_pubr() + "
+"0","  labs(x = 'Handedness', y = 'Count') # The rest is just decoration"

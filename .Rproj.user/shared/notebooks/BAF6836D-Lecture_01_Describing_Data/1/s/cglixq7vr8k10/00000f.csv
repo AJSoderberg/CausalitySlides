@@ -1,0 +1,1 @@
+"0","handedness_data <- data.frame(hand = c(rep('Left', 9*452),rep('Ambidextrous',.5*452),rep('Right',90.5*452)))"

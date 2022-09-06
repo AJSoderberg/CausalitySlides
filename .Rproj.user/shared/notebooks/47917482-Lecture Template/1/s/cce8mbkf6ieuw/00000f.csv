@@ -1,0 +1,4 @@
+"0","#Read in data"
+"0","data(co2)"
+"0","#Plot, cex for bigger font"
+"0","plot(co2,xlab=""Year"",ylab=""Atmospheric CO2 Concentration"",cex=1.75)"

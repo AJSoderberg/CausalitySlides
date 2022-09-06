@@ -1,0 +1,85 @@
+---
+title: "Lecture 0: What Is Research?"
+author: "Lorin Rudin-Rush"
+created on: "6 September, 2022"
+date: "`r Sys.Date()`"
+output:   
+  revealjs::revealjs_presentation:
+    theme: solarized
+    transition: slide
+    self_contained: true
+    smart: true
+    fig_caption: true
+    reveal_options:
+      slideNumber: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+theme_set(theme_gray(base_size = 15))
+```
+
+## What Is Research
+
+-   Searching for *Knowledge*
+-   Searching for *Truth*
+-   *Investigation* of ideas
+-   *Examination* of problems
+
+## What Are Internships
+
+-   Limited time real world work experience
+-   Exploitative menial work to save company money
+-   Marketable skill development for resumes and portfolios
+
+## So you may ask yourself
+
+-   What is my job here?
+-   What are my weekly duties?
+-   Can I be fired?
+-   What is the end goal?
+-   Should I be nervous?
+
+## Answers
+
+-   Develop questions based on the HFPS COVID-19 data
+-   6 hours of independent work
+-   1.5 - 2 hours of structured learning
+-   Yes
+-   At least a good research presentation, at best an Academic Journal Quality Paper
+-   No
+
+## What Is Research II
+
+-   What are types of research?
+-   Who does research?
+-   How else can we think about research?
+
+## Who does research?
+
+-   Individuals
+-   Private Companies
+-   Academic Institutions
+-   Government Institutions
+
+## What types of research do the institutions engage in?
+
+-   Individuals
+-   Private Companies
+-   Academic Institutions
+-   Government Institutions
+
+## Next Week:
+
+-   Research Design, Questions, and Hypotheses
+-   Read NHK ``The Effect'' Chapter 2
+-   Go over Slides (to be created...)
+-   Write down questions to be answered
+
+
+
+
+
+
+
