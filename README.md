@@ -1,9 +1,7 @@
 # Data Analysis and Applied Economics Slides
 Slides for [AIDE Lab undergraduate internship](https://aidelab.arizona.edu/internships) training in Data Analysis and Applied Economics at the University of Arizona, adapted from [@NickCH-K](https://github.com/NickCH-K) class on Causal Inference at Seattle University.
 
-This class follows my textbook [The Effect: An Introduction to Research Design and Causality](http://nickchk.com/causalitybook.html), for which the first half is currently available online, although additional chapters will be available soon.
-
-It also makes use of my series of [Videos on Causality](http://nickchk.com/videos.html#causality), with the note that these videos cover causal concepts but not estimation - they don't even use regression. The class does use regression.
+This internship training follows [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/), all of which is currently available online.
 
 [Lecture 1: Describing Data](http://nickch-k.github.io/CausalitySlides/Lecture_01_Describing_Data.html)
 
