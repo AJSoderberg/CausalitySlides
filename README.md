@@ -3,6 +3,8 @@ Slides for [AIDE Lab undergraduate internship](https://aidelab.arizona.edu/inter
 
 This internship training follows [The Effect: An Introduction to Research Design and Causality](https://theeffectbook.net/), all of which is currently available online.
 
+[Lecture 0: What Is Research](https://44iggs44.github.io/CausalitySlides/Lecture_00_What_Is_Researcth.html)
+
 [Lecture 1: Describing Data](http://nickch-k.github.io/CausalitySlides/Lecture_01_Describing_Data.html)
 
 [Lecture 2: Describing Relationships](https://nickch-k.github.io/CausalitySlides/Lecture_02_Describing_Relationships.html#/)
