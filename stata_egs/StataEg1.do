@@ -19,20 +19,15 @@
 **# 0 - setup
 *************************************************************************
 
-* load data from system
-	sysuse			auto.dta
+* define
+	global	input = "$data/analysis/food_security"
+	
+	
 	
 	
 *************************************************************************
 **# 1 - Describe Data
 *************************************************************************	
 	
-	
-* describe data
-	sysdescribe		auto.dta
 
-* using tab function
-	tab				mpg
-	tab				turn
-	
 	
