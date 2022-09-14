@@ -5,7 +5,7 @@ This internship training follows [The Effect: An Introduction to Research Design
 
 [Lecture 0: What Is Research](http://44iggs44.github.io/CausalitySlides/Lecture_00_What_Is_Research.html)
 
-[Lecture 1: Describing Variables]
+[Lecture 1: Describing Variables](http://44iggs44.github.io/CausalitySlides/Lecture_01_Describing_Data.html)
 
 [Lecture 2: Describing Relationships]
 
