@@ -190,13 +190,18 @@ quietly graph export kdensfsi.jpg, replace
 ## Continuous Distributions
 
 
+```{stata pctile, echo = 1, eval = FALSE, results = "hide"}
+kdensity std_fsi, bwidth(.75) xline(`p10') normal
+quietly graph export kdpctfsi.jpg, replace
+```
+![Density Distribution with 10th Percentile](kdpctfsi.jpg)
 
 ## Summarizing Continuous Data
 
-- Commonly we want to describe these distrbutions much more compactly, while still telling us something about them
+- Commonly we want to describe these distributions much more compactly, while still telling us something about them
 
 
-## Summarizing Continuous Data
+## Summarizing Continuous Data 
 
 - Every "summary statistic" of a given variable is just a way of describing some aspect of these distributions
 - Commonly we are focused on just a few important features of the distribution:

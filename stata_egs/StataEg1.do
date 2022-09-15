@@ -22,7 +22,7 @@
 
 * define
 	global	input = "$data/analysis/food_security"
-	
+	global	fig	= "C:/Users/lirro/Documents/GitHub/CausalitySlides"
 	
 	
 	
@@ -51,6 +51,15 @@
 	
 	histogram		std_fsi, bin(100)
 	
-	kdensity std_fsi, bwidth(.75) normal
+	kdensity 		std_fsi, bwidth(.75) normal
+	
+	_pctile			std_fsi, percentiles(10)
+	local			p10 = r(r1)
+	
+	kdensity 		std_fsi, bwidth(.75) xline(`p10') normal //
+						saving("$fig/kdpctfsi", replace)
+	
+	graph export	"$fig/kdpctfsi.jpg", as(jpg) replace
+	
 	
 	
