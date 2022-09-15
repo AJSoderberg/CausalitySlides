@@ -50,12 +50,9 @@
 	if `"`c(username)'"' == "lirro" {
 		global 		code  	"C:/Users/lirro/Documents/GitHub/wb_covid"
 		global 		data	"G:/.shortcut-targets-by-id/1wmQb8xn5Qop-2J14D7Z2rdKxJhcwfP_q/wb_covid/data"
-		global 		output  "G:/.shortcut-targets-by-id/1wmQb8xn5Qop-2J14D7Z2rdKxJhcwfP_q/wb_covid/output/food_security/paper"
+		global 		output  "C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs"
 	}
 
-	
-
-	
 	
 ************************************************************************
 **# 0 (b) - Check if any required packages are installed:
@@ -65,7 +62,7 @@
 if $pack == 1 {
 	
 	* for packages/commands, make a local containing any required packages
-		loc userpack "blindschemes estout palettes colrspace carryforward" 
+		loc userpack "blindschemes estout palettes colrspace carryforward markstat" 
 	
 	* install packages that are on ssc	
 		foreach package in `userpack' {

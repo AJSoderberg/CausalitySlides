@@ -1,0 +1,39 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs/logs/Lecture_01.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}14 Sep 2022, 16:58:12
+{txt}
+{com}.         
+. 
+. *************************************************************************
+. **# 1 - Lesson 1 Presentation
+. *************************************************************************       
+. 
+. % Lecture 1: Describing Data
+{bf}{err}%{sf} is not a valid command name
+{txt}{search r(199), local:r(199);}
+
+end of do-file
+
+{search r(199), local:r(199);}
+
+{com}. whereis pandoc full-path-to-pandoc-executable
+{res}{err}file or folder "full-path-to-pandoc-executable" not found
+{txt}{search r(601), local:r(601);}
+
+{com}. whereis pandoc
+{res}{err}{txt}location of pandoc has not been stored with {cmd:whereis}
+{err}{txt}type {cmd:help whereis} or click {help whereis} for instructions
+{search r(601), local:r(601);}
+
+{com}. help whereis
+
+. whereis pandoc "C:\Users\lirro\OneDrive\Documents\R\win-library\4.1\rmarkdown\rmd\h\pandoc"
+{res}{txt}C:\Users\lirro\OneDrive\Documents\R\win-library\4.1\rmarkdown\rmd\h\pandoc
+
+{com}. whereis pandoc
+{res}{txt}C:\Users\lirro\OneDrive\Documents\R\win-library\4.1\rmarkdown\rmd\h\pandoc
+
+{com}. exit, clear

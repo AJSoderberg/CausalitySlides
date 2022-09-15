@@ -2,7 +2,7 @@
 * Created on: 5 September 2022
 * Created by: lirr
 * Edited by: lirr
-* Last edited: 5 September 2022
+* Last edited: 14 September 2022
 * Stata v.17.0
 
 * does
@@ -10,6 +10,7 @@
 
 * assumes
 	* you are using stata
+	* markstat user package
 
 * TO DO:
 	* all
@@ -28,6 +29,28 @@
 *************************************************************************
 **# 1 - Describe Data
 *************************************************************************	
-	
 
+
+* Discrete Distributions slide
+	
+* read in data
+	use				"$input/fies_reg_data", replace
+
+* count table	
+	tab				sexhh
+	
+	tab				fsi
+	
+* histogram of fies count variable
+	histogram		fsi, percent
+	
+* histogram of std_fsi variable (it is continuous)
+	histogram		std_fsi, bin(5)
+	
+	histogram		std_fsi, bin(10)
+	
+	histogram		std_fsi, bin(100)
+	
+	kdensity std_fsi, bwidth(.75) normal
+	
 	
