@@ -23,6 +23,7 @@ library(ggpubr)
 theme_set(theme_gray(base_size = 15))
 ```
 
+
 ## Causality
 
 - This class is about causality
@@ -142,6 +143,7 @@ histogram std_fsi, bin(5)
 quietly graph export histstdFsi.jpg, replace
 ```
 
+
 ![Standardized FIES Score 5 Bins](histstdFsi.jpg)
 
 ## Continuous Distributions
@@ -200,8 +202,10 @@ quietly graph export kdpctfsi.jpg, replace
 
 - Commonly we want to describe these distributions much more compactly, while still telling us something about them
 
-
-## Summarizing Continuous Data 
+```{stata, echo = TRUE, eval = TRUE}
+  sum  hhsize
+```
+## Summarizing Continuous Data
 
 - Every "summary statistic" of a given variable is just a way of describing some aspect of these distributions
 - Commonly we are focused on just a few important features of the distribution:
@@ -235,6 +239,15 @@ quietly graph export kdpctfsi.jpg, replace
 - Some of these are percentile-based measures, like the inter-quartile range (75th percentile minus 25th) or the range (Max - Min, or 100th percentile minus 0th)
 - Most commonly we will use standard deviation and variance
 
+```{r,echo = FALSE, eval = TRUE}
+data(Scorecard, package = 'pmdplyr')
+```
+
+```{r, echo = FALSE}
+Scorecard %>%
+  select(repay_rate) %>%
+  sumtable(out = 'kable')
+```
 
 ## Dispersion
 
@@ -244,6 +257,28 @@ quietly graph export kdpctfsi.jpg, replace
 
 ## Dispersion
 
+```{r}
+names <- c('Very Low Variation','A Little More Variation','Even More Variation','Lots of Variation')
+
+set.seed(1000)
+dfs <-  c(.2,.25,.5,.75) %>%
+  map(function(x)
+    data.frame(x = rnorm(100,sd=x)))
+
+p <- 1:4 %>%
+  map(function(x)
+    ggplot(dfs[[x]],aes(x=x))+
+      geom_density()+
+      scale_x_continuous(limits=c(min(dfs[[4]]$x),max(dfs[[4]]$x)))+
+      scale_y_continuous(limits=c(0,
+                                  max(density(dfs[[1]]$x)$y)))+
+      labs(x='Observed Value',y='Density',title=names[x])+
+      theme_pubr()+
+      theme(text = element_text(size = 13)))
+
+
+(p[[1]] + p[[2]]) / (p[[3]] + p[[4]])
+```
 
 ## Skew
 
@@ -255,7 +290,29 @@ quietly graph export kdpctfsi.jpg, replace
 
 ## Skew
 
+```{r}
+set.seed(500)
+df <- data.frame(expy = exp(rnorm(10000)+1))
 
+p1 <- ggplot(df, aes(x = expy)) + geom_density() + 
+  geom_vline(aes(xintercept = mean(expy)), linetype = 'dashed') + 
+  annotate(x = mean(expy), y = .25, geom = 'label', label = 'Mean') +
+  labs(x = 'Value',y = 'Density', title = 'Skewed Data') +
+  theme_pubr() + 
+  theme(text         = element_text(size = 13),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())
+
+p2 <- ggplot(df, aes(x = log(expy))) + geom_density() +
+  geom_vline(aes(xintercept = mean(log(expy))), linetype = 'dashed') + 
+  annotate(x = mean(log(expy)), y = .25, geom = 'label', label = 'Mean') +
+  labs(x = 'Value',y = 'Density', title = 'Logged Skewed Data') +
+  theme_pubr() + 
+  theme(text         = element_text(size = 13),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())
+p1 + p2
+```
 
 ## Theoretical Distributions
 
@@ -303,16 +360,16 @@ $$ \bar{X} = \hat{\mu} \sim N(\mu, \sigma/\sqrt{n}) $$
 
 ## Sampling Variation
 
-- With  observations, the average of that repayment rate is , standard deviation is 
+- With `r sum(!is.na(Scorecard$repay_rate))` observations, the average of that repayment rate is `r scales::number(mean(Scorecard$repay_rate, na.rm = TRUE), accuracy = .001)`, standard deviation is `r scales::number(sd(Scorecard$repay_rate, na.rm = TRUE), accuracy = .001)`
 - Does the average college have a repayment rate of 50\%?
-- If it does, then the mean of a sample of observations should follow a distribution of $N(.5, \sigma/\sqrt{20890})$
+- If it does, then the mean of a sample of `r sum(!is.na(Scorecard$repay_rate))` observations should follow a distribution of $N(.5, \sigma/\sqrt{20890})$
 - Estimate $\hat{\sigma}$ using sample standard deviation $s$ (with a correction)
 
 ## Sampling Variation
 
 - So if the true distribution has a mean of 50% (whatever kind of distribution it is, as long as it has a mean - we don't need to assume the distribution is normal, the sampling variation of the mean will be normal anyway), then $\bar{X} \sim N(.5, .0013)$
-- The probability of getting $\bar{X} =$  or something even higher is  It rounds to 0 here but it's just an extremely small number. This is a *one-tailed p-value*
-- The probability of getting $\bar{X} =$ or something *equally far away or farther from .5 in either direction* is `2*(1-pnorm(.575, .5, .0013)`, a *two-tailed p-value*
+- The probability of getting $\bar{X} =$ `r scales::number(mean(Scorecard$repay_rate, na.rm = TRUE), accuracy = .001)` or something even higher is `1-pnorm(.575, .5, .0013) = `r 1-pnorm(.575, .5, .0013)`. It rounds to 0 here but it's just an extremely small number. This is a *one-tailed p-value*
+- The probability of getting $\bar{X} =$ `r scales::number(mean(Scorecard$repay_rate, na.rm = TRUE), accuracy = .001)` or something *equally far away or farther from .5 in either direction* is `2*(1-pnorm(.575, .5, .0013)`, a *two-tailed p-value*
 
 ## Sampling Variation
 
