@@ -240,13 +240,17 @@ quietly graph export kdpctfsi.jpg, replace
 - Most commonly we will use standard deviation and variance
 
 ```{r,echo = FALSE, eval = TRUE}
+
 data(Scorecard, package = 'pmdplyr')
+
 ```
 
 ```{r, echo = FALSE}
+library(vtable)
 Scorecard %>%
   select(repay_rate) %>%
-  sumtable(out = 'kable')
+  sumtable()
+
 ```
 
 ## Dispersion
