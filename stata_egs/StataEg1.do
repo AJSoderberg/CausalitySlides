@@ -2,7 +2,7 @@
 * Created on: 5 September 2022
 * Created by: lirr
 * Edited by: lirr
-* Last edited: 14 September 2022
+* Last edited: 16 September 2022
 * Stata v.17.0
 
 * does
@@ -10,7 +10,6 @@
 
 * assumes
 	* you are using stata
-	* markstat user package
 
 * TO DO:
 	* all
@@ -21,9 +20,9 @@
 *************************************************************************
 
 * define
-	global	input = "$data/analysis/food_security"
+	global	food = "$data/analysis/food_security"
 	global	fig	= "C:/Users/lirro/Documents/GitHub/CausalitySlides"
-	
+	global	covid = "$data/analysis"
 	
 	
 *************************************************************************
@@ -34,7 +33,8 @@
 * Discrete Distributions slide
 	
 * read in data
-	use				"$input/fies_reg_data", replace
+	*use				"$food/fies_reg_data", replace
+	use				"$covid/lsms_panel.dta", replace
 
 * count table	
 	tab				sexhh
