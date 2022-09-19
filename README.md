@@ -9,11 +9,11 @@ This internship training follows [The Effect: An Introduction to Research Design
 
 [Lecture 1: Describing Variables COVID Examples](http://44iggs44.github.io/CausalitySlides/Lecture_01_Describing_Data_COVID.html)
 
-[Lecture 2: Describing Relationships]
-
-[Lecture 4: Identification]
+[Lecture 2: Describing Relationships](http://44iggs44.github.io/CausalitySlides/Lecture_02_Describing_Relationships.html)
 
 [Lecture 3: Causal Diagrams]
+
+[Lecture 4: Identification]
 
 [Lecture 5: Drawing Causal Diagrams]
 
