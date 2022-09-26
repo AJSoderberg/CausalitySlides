@@ -1,0 +1,34 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs/logs/Lecture_02.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}23 Sep 2022, 09:44:49
+{txt}
+{com}.         
+. * loads data for examples
+.         causaldata Mroz.dta, use clear download
+{txt}
+{com}.                 *** obs == 753          
+.         
+. *************************************************************************
+. **# 1 - select working women
+. *************************************************************************
+. 
+. * keep observations that are working women
+. 
+. 
+. 
+. *************************************************************************
+. **#  - end matters
+. *************************************************************************
+. 
+. * close the log
+.         log                             close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs/logs/Lecture_02.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}23 Sep 2022, 09:44:49
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

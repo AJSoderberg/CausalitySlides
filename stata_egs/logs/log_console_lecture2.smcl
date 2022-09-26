@@ -1,0 +1,57 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\lirro\Documents\GitHub\CausalitySlides\stata_egs\logs\log_console_lecture2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}23 Sep 2022, 09:38:17
+
+{com}. tab k5
+
+  {txt}Number of {c |}
+ children 5 {c |}
+  years old {c |}
+ or younger {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        606       80.48       80.48
+{txt}          1 {c |}{res}        118       15.67       96.15
+{txt}          2 {c |}{res}         26        3.45       99.60
+{txt}          3 {c |}{res}          3        0.40      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        753      100.00
+
+{com}. do "C:\Users\lirro\Documents\GitHub\CausalitySlides\stata_egs\lecture2_lirr.do"
+{txt}
+{com}. * Project: Undergraduate Research Group
+. * Created on: 23 September 2022
+. * Created by: lirr
+. * Edited by: lirr
+. * Last edited: 23 September 2022
+. * Stata v.17.0
+. 
+. * does
+.         * examples from lecture 2
+. 
+. * assumes
+.         * you are using stata
+.         * assumes you have causality ssc package
+. 
+. * TO DO:
+.         * all
+. 
+. *************************************************************************
+. **# 0 - setup
+. *************************************************************************
+. 
+. * this line installs causal data if you do not have it
+.         *ssc install            causaldata
+. 
+. * set log filepath
+.         global          output  "C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs"
+{txt}
+{com}.         global          logout  "$output/logs"
+{txt}
+{com}.         
+. * open log
+.         cap log                 close
+{smcl}
+{com}{sf}{ul off}

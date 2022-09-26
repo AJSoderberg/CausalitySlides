@@ -35,17 +35,6 @@
 
 
 * Define root folder globals
-    if `"`c(username)'"' == "jdmichler" {
-        global 		code  	"C:/Users/jdmichler/git/AIDELabAZ/covid_food_security"
-		global 		data	"G:/My Drive/wb_covid/data"
-		global 		output  "G:/My Drive/wb_covid/output/food_security/paper"
-    }
-
-    if `"`c(username)'"' == "aljosephson" {
-        global 		code  	"C:/Users/aljosephson/git/wb_covid"
-		global 		data	"G:/My Drive/wb_covid/data"
-		global 		output "G:/My Drive/wb_covid/output/food_security/paper"
-    }
 	
 	if `"`c(username)'"' == "lirro" {
 		global 		code  	"C:/Users/lirro/Documents/GitHub/wb_covid"
