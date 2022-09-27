@@ -37,7 +37,7 @@
 * Define root folder globals
 	
 	if `"`c(username)'"' == "lirro" {
-		global 		code  	"C:/Users/lirro/Documents/GitHub/wb_covid"
+		global 		code  	"C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs"
 		global 		data	"G:/.shortcut-targets-by-id/1wmQb8xn5Qop-2J14D7Z2rdKxJhcwfP_q/wb_covid/data"
 		global 		output  "C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs"
 	}
