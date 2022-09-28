@@ -31,4 +31,59 @@
  {txt}closed on:  {res}23 Sep 2022, 09:44:49
 {txt}{.-}
 {smcl}
+{txt}{sf}{ul off}{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs/logs/Lecture_02.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}28 Sep 2022, 14:55:07
+{txt}
+{com}.         
+. * loads data for examples
+.         causaldata Mroz.dta, use clear download
+{txt}
+{com}.                 *** obs == 753          
+.         
+. *************************************************************************
+. **# 1 - select working women
+. *************************************************************************
+. 
+. * keep observations that are working women
+.         keep if                 lfp == 1
+{txt}(325 observations deleted)
+
+{com}.                 *** obs == 428
+.                 
+. * generate unlogged wage variable
+.         gen                             earn = exp(lwg)
+{txt}
+{com}.         
+. * drop obs with no income
+.         drop if                 inc <0
+{txt}(1 observation deleted)
+
+{com}.                 *** obs == 427
+.                 
+.                 
+. *************************************************************************
+. **# 2 - generat figures
+. *************************************************************************
+. 
+. * create scatterplot of income and earn
+.         twoway scatter  inc earn
+{res}{txt}
+{com}.                 
+.         
+. *************************************************************************
+. **#  - end matters
+. *************************************************************************
+. 
+. * close the log
+.         log                             close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs/logs/Lecture_02.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}28 Sep 2022, 14:55:14
+{txt}{.-}
+{smcl}
 {txt}{sf}{ul off}
