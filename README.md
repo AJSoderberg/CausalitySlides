@@ -11,7 +11,7 @@ This internship training follows [The Effect: An Introduction to Research Design
 
 [Lecture 2: Describing Relationships](http://44iggs44.github.io/CausalitySlides/Lecture_02_Describing_Relationships.html)
 
-[Lecture 3: Causal Diagrams]
+[Lecture 3: Causal Diagrams](https://github.com/44iggs44/CausalitySlides/Lecture_03_Causality.html)
 
 [Lecture 4: Identification]
 
