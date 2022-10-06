@@ -86,4 +86,70 @@
  {txt}closed on:  {res}28 Sep 2022, 14:55:14
 {txt}{.-}
 {smcl}
+{txt}{sf}{ul off}{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\andre\git\CausalitySlides\stata_egs/logs/Lecture_02.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}30 Sep 2022, 09:46:39
+{txt}
+{com}.         
+. * loads data for examples
+. sysuse  causaldata Mroz.dta, clear
+{err}invalid 'Mroz.dta' 
+{txt}{search r(198), local:r(198);}
+
+end of do-file
+
+{search r(198), local:r(198);}
+
+{com}. do "C:\Users\andre\AppData\Local\Temp\STD20bc_000000.tmp"
+{txt}
+{com}. sysuse Mroz.dta, clear
+{txt}
+{com}.                 *** obs == 753          
+.         
+. *************************************************************************
+. **# 1 - select working women
+. *************************************************************************
+. 
+. * keep observations that are working women
+.         keep if                 lfp == 1
+{txt}(325 observations deleted)
+
+{com}.                 *** obs == 428
+.                 
+. * generate unlogged wage variable
+.         gen                             earn = exp(lwg)
+{txt}
+{com}.         
+. * drop obs with no income
+.         drop if                 inc <0
+{txt}(1 observation deleted)
+
+{com}.                 *** obs == 427
+.                 
+.                 
+. *************************************************************************
+. **# 2 - generat figures
+. *************************************************************************
+. 
+. * create scatterplot of income and earn
+.         twoway scatter  inc earn
+{txt}(note: scheme plotplain not found, using s2color)
+{res}{txt}
+{com}.                 
+.         
+. *************************************************************************
+. **#  - end matters
+. *************************************************************************
+. 
+. * close the log
+.         log                             close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\andre\git\CausalitySlides\stata_egs/logs/Lecture_02.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}30 Sep 2022, 09:47:26
+{txt}{.-}
+{smcl}
 {txt}{sf}{ul off}

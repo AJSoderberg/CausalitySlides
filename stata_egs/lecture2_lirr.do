@@ -23,7 +23,7 @@
 	*ssc install		causaldata
 
 * set log filepath
-	global 		output  "C:/Users/lirro/Documents/GitHub/CausalitySlides/stata_egs"
+
 	global		logout	"$output/logs"
 	
 * open log
@@ -31,7 +31,7 @@
 	log using		"$logout/Lecture_02", append	
 	
 * loads data for examples
-	causaldata Mroz.dta, use clear download
+sysuse Mroz.dta, clear
 		*** obs == 753		
 	
 *************************************************************************
